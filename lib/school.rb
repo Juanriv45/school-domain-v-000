@@ -10,6 +10,6 @@ class School
   end
 
   def roster
-    puts ROSTER
+   ROSTER
   end
 end
