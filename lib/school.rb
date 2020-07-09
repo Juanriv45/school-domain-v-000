@@ -1,4 +1,4 @@
-# code here!\
+# code here!
 class School
   attr_accessor :name, :roster
 
@@ -7,25 +7,23 @@ class School
     @roster = {}
   end
 
-  def add_student(student,grade)
-    if roster[grade] then
-      roster[grade] << student
-    else
-      roster[grade] = []
-      roster[grade] << student
-    end
+  def add_student(student_name,grade)
+    roster[grade] ||= []
+        roster[grade] << student_name
+
   end
 
-  def grade(grade_number)
-    roster[grade_number]
+  def grade(grade)
+    roster[grade]
   end
 
   def sort
-    sorted ={}
-    roster.map do |grade, students|
+    sorted = {}
+    roster.each do |grade, students|
       sorted[grade] = students.sort
     end
     sorted
   end
+
 
 end
