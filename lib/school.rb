@@ -10,6 +10,8 @@ class School
   end
 
   def roster
-   ROSTER
+   ROSTER.each do |name|
+     name
+   end
   end
 end
