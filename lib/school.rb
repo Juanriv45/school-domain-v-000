@@ -1,17 +1,10 @@
 # code here!
 class School
-  attr_reader :name
-
-  ROSTER = []
+  attr_accessor :name, :roster
 
   def initialize(name)
     @name = name
-    ROSTER << name
+    @roster = {}
   end
 
-  def roster
-   ROSTER.each do |name|
-     name
-   end
-  end
 end
