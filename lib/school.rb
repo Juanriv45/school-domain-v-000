@@ -9,5 +9,7 @@ class School
     ROSTER << name
   end
 
-
+  def roster
+    ROSTER
+  end
 end
